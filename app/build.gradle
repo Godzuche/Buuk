@@ -62,5 +62,5 @@ dependencies {
     debugImplementation("androidx.fragment:fragment-testing:$fragment_version")
 
     // Splash screen api
-    implementation "androidx.core:core-splashscreen:1.0.0-alpha02"
+    implementation 'androidx.core:core-splashscreen:1.0.0-alpha02'
 }
