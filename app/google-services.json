@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "253044604502",
+    "project_id": "buuk-app",
+    "storage_bucket": "buuk-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:253044604502:android:4f0ecba529ceb9d2d205f7",
+        "android_client_info": {
+          "package_name": "com.godzuche.buuk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "253044604502-q251cg9rme8gq0toe7tgk5skm03vd58r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8jTEpw3UG-SJIOsAnMD6mlu1VpPIbPY4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "253044604502-q251cg9rme8gq0toe7tgk5skm03vd58r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
