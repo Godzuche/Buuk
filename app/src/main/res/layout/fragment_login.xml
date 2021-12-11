@@ -1,16 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.auth.LoginFragment"
-    android:theme="@style/Theme.Buuk">
+    android:padding="8dp"
+    android:theme="@style/Theme.Buuk"
+    tools:context=".ui.auth.LoginFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment"
-        />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/bt_anonymous_sign_in"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        android:text="Sign Up Later"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_app_name"
+        style="?textAppearanceHeadline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        android:text="@string/app_name"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bt_anonymous_sign_in" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_text_below_app_name"
+        style="?textAppearanceBody1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        android:text="Learning made easy..."
+        app:layout_constraintEnd_toEndOf="@id/tv_app_name"
+        app:layout_constraintStart_toStartOf="@id/tv_app_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_app_name" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/bt_google_sign_in"
+        style="?materialButtonOutlinedStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="32dp"
+        android:text="Continue with Google"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_text_below_app_name" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/bt_fb_sign_in"
+        style="?materialButtonOutlinedStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Continue with Facebook"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@id/bt_google_sign_in"
+        app:layout_constraintStart_toStartOf="@id/bt_google_sign_in"
+        app:layout_constraintTop_toBottomOf="@id/bt_google_sign_in" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginVertical="12dp"
+        app:layout_constraintStart_toStartOf="@id/bt_fb_sign_in"
+        app:layout_constraintTop_toBottomOf="@id/bt_fb_sign_in"
+        app:layout_constraintEnd_toEndOf="@id/bt_fb_sign_in"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/bt_login_with_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Log in with Email"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@id/divider"
+        app:layout_constraintStart_toStartOf="@id/divider"
+        app:layout_constraintTop_toBottomOf="@id/divider" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/bt_create_account"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="New to Buuk? Create Account"
+        android:layout_marginVertical="16dp"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@id/bt_login_with_email"
+        app:layout_constraintStart_toStartOf="@id/bt_login_with_email"
+        app:layout_constraintTop_toBottomOf="@id/bt_login_with_email" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_terms_services"
+        style="?textAppearanceBody2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:text="By creating an account, you accept Buuk's"
+        app:layout_constraintEnd_toEndOf="@id/bt_create_account"
+        app:layout_constraintStart_toStartOf="@id/bt_create_account"
+        app:layout_constraintTop_toBottomOf="@id/bt_create_account" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@id/tv_terms_services"
+        app:layout_constraintStart_toStartOf="@id/tv_terms_services"
+        app:layout_constraintTop_toBottomOf="@id/tv_terms_services">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_terms_of_services"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:text="Terms of Services"
+            android:textAllCaps="false"
+            android:textSize="13sp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_and"
+            style="?textAppearanceBody2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="and" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_privacy_policy"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Privacy Policy"
+            android:textAllCaps="false"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="386dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
