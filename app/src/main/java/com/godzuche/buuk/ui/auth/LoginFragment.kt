@@ -13,9 +13,7 @@ class LoginFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        (activity as AppCompatActivity).supportActionBar?.hide()
 
-//        setHasOptionsMenu(true)
     }
 
     override fun onCreateView(
