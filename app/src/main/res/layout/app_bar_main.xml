@@ -12,6 +12,7 @@
         app:liftOnScroll="true">
 
         <com.google.android.material.appbar.MaterialToolbar
+            app:title="@string/app_name"
             android:id="@+id/toolbar_main"
             android:layout_width="match_parent"
             android:layout_height="?actionBarSize"
