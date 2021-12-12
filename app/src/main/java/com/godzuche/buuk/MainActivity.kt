@@ -44,12 +44,14 @@ class MainActivity : AppCompatActivity() {
         navController.addOnDestinationChangedListener { controller, destination, arguments ->
             when (destination.id) {
                 R.id.loginFragment -> hideTopAppBarAndBottomNav()
+                R.id.signUpFragment -> hideTopAppBarAndBottomNav()
                 else -> showTopAppBarAndBottomNav()
             }
         }
     }
 
     private fun showTopAppBarAndBottomNav() {
+//        TransitionManager.beginDelayedTransition(binding.root, Slide(Gravity.BOTTOM).excludeTarget(R.id.nav_host_fragment, true))
         binding.appBarMain.toolbarMain.visibility = View.VISIBLE
         bottomNavigationView.visibility = View.VISIBLE
     }
