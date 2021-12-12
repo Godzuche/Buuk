@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="8dp"
     tools:context=".ui.auth.LoginFragment">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/bt_anonymous_sign_in"
@@ -23,6 +29,7 @@
         style="?textAppearanceHeadline6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="?colorPrimary"
         android:layout_marginVertical="8dp"
         android:text="@string/app_name"
         android:textSize="32sp"
@@ -45,10 +52,14 @@
         android:id="@+id/bt_google_sign_in"
         style="?materialButtonOutlinedStyle"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         android:layout_marginHorizontal="8dp"
         android:layout_marginTop="32dp"
+        android:textColor="@color/black"
+        app:icon="@drawable/icons8_google"
+        app:iconTint="@null"
         android:text="Continue with Google"
+        app:iconGravity="textStart"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,9 +69,13 @@
         android:id="@+id/bt_fb_sign_in"
         style="?materialButtonOutlinedStyle"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
+        android:textColor="@color/black"
         android:layout_marginTop="4dp"
         android:text="Continue with Facebook"
+        app:iconTint="@null"
+        app:iconGravity="textStart"
+        app:icon="@drawable/icons8_facebook"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="@id/bt_google_sign_in"
         app:layout_constraintStart_toStartOf="@id/bt_google_sign_in"
@@ -71,6 +86,7 @@
         android:layout_width="0dp"
         android:layout_height="1dp"
         android:layout_marginVertical="12dp"
+        android:background="#c0c0c0"
         app:layout_constraintStart_toStartOf="@id/bt_fb_sign_in"
         app:layout_constraintTop_toBottomOf="@id/bt_fb_sign_in"
         app:layout_constraintEnd_toEndOf="@id/bt_fb_sign_in"/>
@@ -78,9 +94,10 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/bt_login_with_email"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         android:text="Log in with Email"
         android:textAllCaps="false"
+        android:layout_marginTop="12dp"
         app:layout_constraintEnd_toEndOf="@id/divider"
         app:layout_constraintStart_toStartOf="@id/divider"
         app:layout_constraintTop_toBottomOf="@id/divider" />
@@ -123,6 +140,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="top"
+            android:insetTop="0dp"
             android:text="Terms of Services"
             android:textAllCaps="false"
             android:textSize="13sp" />
@@ -140,6 +158,8 @@
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:gravity="top"
+            android:insetTop="0dp"
             android:text="Privacy Policy"
             android:textAllCaps="false"
             android:textSize="13sp" />
@@ -154,3 +174,4 @@
         app:layout_constraintGuide_end="386dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

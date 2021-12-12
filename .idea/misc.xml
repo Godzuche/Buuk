@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/Buuk/app/src/main/res/drawable/ic_icons8_facebook.xml" value="0.2101851851851852" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/Buuk/app/src/main/res/drawable/ic_icons8_google.xml" value="0.2101851851851852" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/Buuk/app/src/main/res/drawable/ic_search.xml" value="0.2101851851851852" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/Buuk/app/src/main/res/layout/activity_intro.xml" value="0.20677083333333332" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/Buuk/app/src/main/res/layout/activity_main.xml" value="0.19270833333333334" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/Buuk/app/src/main/res/layout/activity_splash.xml" value="0.19270833333333334" />
