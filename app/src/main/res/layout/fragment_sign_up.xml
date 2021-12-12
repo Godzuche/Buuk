@@ -98,13 +98,13 @@
             android:hint="Password (Required)"
             app:layout_constraintEnd_toEndOf="@id/Il_email"
             app:layout_constraintStart_toStartOf="@id/Il_email"
-            app:layout_constraintTop_toBottomOf="@id/Il_email" >
+            app:layout_constraintTop_toBottomOf="@id/Il_email"
+            app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:inputType="textPassword"
-            />
+            android:inputType="textPassword"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -134,8 +134,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
+            android:layout_marginHorizontal="8dp"
             android:text="or"
-            android:gravity="top"
+            android:gravity="center_vertical"
             app:layout_constraintStart_toStartOf="@id/bt_create_new_account"
             app:layout_constraintTop_toBottomOf="@id/bt_create_new_account"
             app:layout_constraintEnd_toEndOf="@id/bt_create_new_account"/>
@@ -144,7 +145,7 @@
             android:id="@+id/view_2"
             android:layout_width="0dp"
             android:layout_height="1dp"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/bt_create_new_account"
             android:background="#c0c0c0"
             app:layout_constraintStart_toEndOf="@id/tv_or"
             app:layout_constraintTop_toTopOf="@id/view_1"
