@@ -9,6 +9,7 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.isGone
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.transition.Slide
@@ -38,7 +39,9 @@ class MainActivity : AppCompatActivity() {
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController
 
-        setupActionBarWithNavController(navController)
+        val topLevelDestinations = setOf<Int>(R.id.action_learn)
+        val appBarConfiguration = AppBarConfiguration(topLevelDestinations)
+        setupActionBarWithNavController(navController, appBarConfiguration)
         bottomNavigationView.setupWithNavController(navController)
 
         navController.addOnDestinationChangedListener { controller, destination, arguments ->
@@ -61,4 +64,5 @@ class MainActivity : AppCompatActivity() {
         binding.appBarMain.toolbarMain.visibility = View.GONE
         bottomNavigationView.visibility = View.GONE
     }
+
 }

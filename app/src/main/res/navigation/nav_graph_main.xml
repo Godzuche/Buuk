@@ -12,10 +12,26 @@
         <action
             android:id="@+id/action_loginFragment_to_signUpFragment"
             app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_action_learn"
+            app:destination="@id/action_learn"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
         android:name="com.godzuche.buuk.ui.auth.SignUpFragment"
         android:label="fragment_sign_up"
-        tools:layout="@layout/fragment_sign_up" />
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_action_learn"
+            app:destination="@id/action_learn"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/action_learn"
+        android:name="com.godzuche.buuk.ui.main.CoursesFragment"
+        android:label="My Courses"
+        tools:layout="@layout/fragment_courses"/>
 </navigation>
