@@ -1,26 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.auth.SignUpFragment">
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/bt_anonymous_sign_in"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="4dp"
+        android:text="Sign Up Later"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="8dp">
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/bt_anonymous_sign_in"
-            style="@style/Widget.MaterialComponents.Button.TextButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="4dp"
-            android:text="Sign Up Later"
-            android:textAllCaps="false"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="wrap_content">
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_app_name"
@@ -33,14 +38,14 @@
             android:textSize="32sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/bt_anonymous_sign_in" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_text_below_app_name"
             style="?textAppearanceBody1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="4dp"
+            android:layout_marginVertical="12dp"
             android:text="Create New Account"
             app:layout_constraintEnd_toEndOf="@id/tv_app_name"
             app:layout_constraintStart_toStartOf="@id/tv_app_name"
@@ -52,7 +57,7 @@
             android:layout_width="0dp"
             android:layout_height="64dp"
             android:layout_marginHorizontal="8dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="32dp"
             app:hintTextColor="?colorSecondary"
             app:boxStrokeColor="?colorSecondary"
             android:hint="Full Name (Required)"
@@ -73,7 +78,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="64dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
             app:hintTextColor="?colorSecondary"
             app:boxStrokeColor="?colorSecondary"
             android:hint="Email (Required)"
@@ -94,7 +99,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="64dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
             app:hintTextColor="?colorSecondary"
             app:boxStrokeColor="?colorSecondary"
             android:hint="Password (Required)"
@@ -117,7 +122,7 @@
             android:layout_height="64dp"
             android:text="Create New Account"
             android:textAllCaps="false"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="12dp"
             app:layout_constraintEnd_toEndOf="@id/Il_password"
             app:layout_constraintStart_toStartOf="@id/Il_password"
             app:layout_constraintTop_toBottomOf="@id/Il_password" />
@@ -136,7 +141,7 @@
             android:id="@+id/tv_or"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="4dp"
+            android:layout_margin="12dp"
             android:layout_marginHorizontal="8dp"
             android:text="or"
             android:gravity="center_vertical"
@@ -171,7 +176,7 @@
             style="?textAppearanceBody2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="32dp"
             android:gravity="center_horizontal"
             android:text="By creating an account, you accept Buuk's"
             app:layout_constraintEnd_toEndOf="@id/bt_login_with_sch_id"
@@ -226,4 +231,5 @@
             app:layout_constraintGuide_end="386dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>
