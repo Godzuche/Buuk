@@ -20,7 +20,8 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -83,5 +84,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics-ktx'
 
     // Google Play services library
+    implementation 'com.google.android.gms:play-services-auth:20.0.0'
+
+    // Google Auth
     implementation 'com.google.android.gms:play-services-auth:20.0.0'
 }
