@@ -56,7 +56,7 @@ class SignUpFragment : Fragment() {
     }
 
     private fun goToHomeFragment() {
-        findNavController().navigate(SignUpFragmentDirections.actionSignUpFragmentToActionLearn())
+        findNavController().navigate(SignUpFragmentDirections.actionSignUpFragmentToExploreFragment())
     }
 
     /*private fun updateProfileUserName() {

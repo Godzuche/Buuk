@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.transition.Transition
 import android.view.Gravity
 import android.view.View
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.isGone
 import androidx.navigation.NavController
@@ -16,7 +17,9 @@ import androidx.transition.Slide
 import androidx.transition.TransitionManager
 import com.godzuche.buuk.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
@@ -32,6 +35,8 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(view)
 
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_AUTO_BATTERY)
+
         setSupportActionBar(binding.appBarMain.toolbarMain)
 
         bottomNavigationView = binding.bottomNavView
@@ -39,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController
 
-        val topLevelDestinations = setOf<Int>(R.id.action_learn)
+        val topLevelDestinations = setOf<Int>( R.id.action_explore, R.id.action_favorites, R.id.action_learn, R.id.action_downloads, R.id.action_profile)
         val appBarConfiguration = AppBarConfiguration(topLevelDestinations)
         setupActionBarWithNavController(navController, appBarConfiguration)
         bottomNavigationView.setupWithNavController(navController)

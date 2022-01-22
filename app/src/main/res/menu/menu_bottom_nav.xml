@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/action_search"
+        android:id="@+id/action_explore"
         android:title="Search"
         android:icon="@drawable/ic_search"/>
     <item
@@ -14,8 +14,8 @@
         android:title="Learn"
         android:icon="@drawable/ic_menu_book"/>
     <item
-        android:id="@+id/action_download"
-        android:title="Download"
+        android:id="@+id/action_downloads"
+        android:title="Downloads"
         android:icon="@drawable/ic_cloud_download"/>
     <item
         android:id="@+id/action_profile"

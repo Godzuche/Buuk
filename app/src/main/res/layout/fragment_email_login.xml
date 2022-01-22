@@ -1,14 +1,236 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EmailLoginFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="8dp"
+    tools:context=".ui.auth.EmailLoginFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/bt_anonymous_sign_in"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="4dp"
+        android:text="Sign Up Later"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_app_name"
+                app:fontFamily="@font/source_sans_pro_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?colorPrimary"
+                android:layout_marginVertical="32dp"
+                android:text="@string/app_name"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_text_below_app_name"
+                app:fontFamily="@font/source_sans_pro"
+                android:textSize="15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="12dp"
+                android:text="Create New Account"
+                app:layout_constraintEnd_toEndOf="@id/tv_app_name"
+                app:layout_constraintStart_toStartOf="@id/tv_app_name"
+                app:layout_constraintTop_toBottomOf="@id/tv_app_name" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Il_email"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:hintTextColor="?colorSecondary"
+                app:boxStrokeColor="?colorSecondary"
+                app:errorEnabled="false"
+                android:hint="E-mail (Required)"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_text_below_app_name" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/source_sans_pro"
+                    android:textSize="18sp"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Il_password"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_marginTop="12dp"
+                app:hintTextColor="?colorSecondary"
+                app:boxStrokeColor="?colorSecondary"
+                android:hint="Password (Required)"
+                app:layout_constraintEnd_toEndOf="@id/Il_email"
+                app:layout_constraintStart_toStartOf="@id/Il_email"
+                app:layout_constraintTop_toBottomOf="@id/Il_email"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/source_sans_pro"
+                    android:textSize="18sp"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/forgot_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forgot Password?"
+                android:textSize="14sp"
+                android:textColor="?colorPrimary"
+                android:fontFamily="@font/source_sans_pro"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintTop_toBottomOf="@id/Il_password"
+                app:layout_constraintEnd_toEndOf="@id/Il_password"
+                android:layout_marginTop="8dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/bt_create_new_account"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:text="Log in"
+                android:textAllCaps="false"
+                android:fontFamily="@font/source_sans_pro_bold"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="@id/Il_password"
+                app:layout_constraintStart_toStartOf="@id/Il_password"
+                app:layout_constraintTop_toBottomOf="@id/forgot_password" />
+
+            <View
+                android:id="@+id/view_1"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="#c0c0c0"
+                app:layout_constraintStart_toStartOf="@id/bt_create_new_account"
+                app:layout_constraintTop_toTopOf="@id/tv_or"
+                app:layout_constraintBottom_toBottomOf="@id/tv_or"
+                app:layout_constraintEnd_toStartOf="@id/tv_or"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_or"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:layout_marginHorizontal="8dp"
+                android:text="or"
+                android:fontFamily="@font/source_sans_pro_light"
+                app:layout_constraintStart_toStartOf="@id/bt_create_new_account"
+                app:layout_constraintTop_toBottomOf="@id/bt_create_new_account"
+                app:layout_constraintEnd_toEndOf="@id/bt_create_new_account"/>
+
+            <View
+                android:id="@+id/view_2"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                app:layout_constraintEnd_toEndOf="@id/bt_create_new_account"
+                android:background="#c0c0c0"
+                app:layout_constraintStart_toEndOf="@id/tv_or"
+                app:layout_constraintTop_toTopOf="@id/view_1"
+                app:layout_constraintBottom_toBottomOf="@id/view_1"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/bt_login_with_sch_id"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_marginVertical="4dp"
+                android:text="Log in with your school ID"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="@id/bt_create_new_account"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/bt_create_new_account"
+                app:layout_constraintTop_toBottomOf="@id/tv_or" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_terms_services"
+                style="?textAppearanceBody2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:gravity="center_horizontal"
+                android:text="By creating an account, you accept Buuk's"
+                app:layout_constraintEnd_toEndOf="@id/bt_login_with_sch_id"
+                app:layout_constraintStart_toStartOf="@id/bt_login_with_sch_id"
+                app:layout_constraintTop_toBottomOf="@id/bt_login_with_sch_id" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@id/tv_terms_services"
+                app:layout_constraintStart_toStartOf="@id/tv_terms_services"
+                app:layout_constraintTop_toBottomOf="@id/tv_terms_services">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/bt_terms_of_services"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:insetTop="0dp"
+                    android:text="Terms of Services"
+                    android:textAllCaps="false"
+                    android:textSize="13sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_and"
+                    style="?textAppearanceBody2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="and" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/bt_privacy_policy"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:insetTop="0dp"
+                    android:text="Privacy Policy"
+                    android:textAllCaps="false"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="386dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

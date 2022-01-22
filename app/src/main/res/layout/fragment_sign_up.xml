@@ -29,20 +29,21 @@
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_app_name"
-            style="?textAppearanceHeadline6"
+            app:fontFamily="@font/source_sans_pro_bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="?colorPrimary"
             android:layout_marginVertical="32dp"
             android:text="@string/app_name"
-            android:textSize="32sp"
+            android:textSize="25sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_text_below_app_name"
-            style="?textAppearanceBody1"
+            app:fontFamily="@font/source_sans_pro"
+            android:textSize="15sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginVertical="12dp"
@@ -61,6 +62,11 @@
             app:hintTextColor="?colorSecondary"
             app:boxStrokeColor="?colorSecondary"
             android:hint="Full Name (Required)"
+            app:hintTextAppearance="@style/TextAppearance.Buuk.Caption"
+            app:boxCornerRadiusBottomEnd="5dp"
+            app:boxCornerRadiusBottomStart="5dp"
+            app:boxCornerRadiusTopEnd="5dp"
+            app:boxCornerRadiusTopStart="5dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_text_below_app_name">
@@ -68,7 +74,10 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_name"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/source_sans_pro"
+                android:textSize="18sp"
+                android:imeOptions="actionNext"
                 android:inputType="textPersonName"/>
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -77,11 +86,12 @@
             android:id="@+id/Il_email"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
-            android:layout_height="64dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             app:hintTextColor="?colorSecondary"
             app:boxStrokeColor="?colorSecondary"
-            android:hint="Email (Required)"
+            app:errorEnabled="false"
+            android:hint="E-mail (Required)"
             app:layout_constraintEnd_toEndOf="@id/Il_name"
             app:layout_constraintStart_toStartOf="@id/Il_name"
             app:layout_constraintTop_toBottomOf="@id/Il_name" >
@@ -89,7 +99,10 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_email"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/source_sans_pro"
+            android:textSize="18sp"
+            android:imeOptions="actionNext"
             android:inputType="textEmailAddress"/>
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -111,7 +124,10 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_password"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/source_sans_pro"
+            android:textSize="18sp"
+            android:imeOptions="actionDone"
             android:inputType="textPassword"/>
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -122,6 +138,7 @@
             android:layout_height="64dp"
             android:text="Create New Account"
             android:textAllCaps="false"
+            android:fontFamily="@font/source_sans_pro_bold"
             android:layout_marginTop="12dp"
             app:layout_constraintEnd_toEndOf="@id/Il_password"
             app:layout_constraintStart_toStartOf="@id/Il_password"
@@ -144,7 +161,7 @@
             android:layout_margin="12dp"
             android:layout_marginHorizontal="8dp"
             android:text="or"
-            android:gravity="center_vertical"
+            android:fontFamily="@font/source_sans_pro_light"
             app:layout_constraintStart_toStartOf="@id/bt_create_new_account"
             app:layout_constraintTop_toBottomOf="@id/bt_create_new_account"
             app:layout_constraintEnd_toEndOf="@id/bt_create_new_account"/>
@@ -164,10 +181,11 @@
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="0dp"
             android:layout_height="64dp"
-            android:text="Log in with your school ID"
             android:layout_marginVertical="4dp"
+            android:text="Log in with your school ID"
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="@id/bt_create_new_account"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@id/bt_create_new_account"
             app:layout_constraintTop_toBottomOf="@id/tv_or" />
 

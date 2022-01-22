@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.auth.LoginFragment">
+    tools:context=".ui.auth.login.LoginFragment">
 
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
@@ -14,11 +14,14 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/bt_anonymous_sign_in"
-        style="@style/Widget.MaterialComponents.Button.TextButton"
+        style="@style/Widget.Material3.Button.TextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginVertical="4dp"
         android:text="Sign Up Later"
+        android:fontFamily="@font/source_sans_pro_semibold"
+        app:fontFamily="@font/source_sans_pro_semibold"
+        android:textSize="16sp"
         android:textAllCaps="false"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -31,6 +34,8 @@
         android:textColor="?colorPrimary"
         android:layout_marginVertical="32dp"
         android:text="@string/app_name"
+        android:fontFamily="@font/source_sans_pro_bold"
+        app:fontFamily="@font/source_sans_pro_bold"
         android:textSize="32sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,27 +43,34 @@
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_text_below_app_name"
-        style="?textAppearanceBody1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginVertical="24dp"
         android:text="Learning made easy..."
+        android:fontFamily="@font/source_sans_pro"
+        app:fontFamily="@font/source_sans_pro"
+        android:textColor="#696969"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@id/tv_app_name"
         app:layout_constraintStart_toStartOf="@id/tv_app_name"
         app:layout_constraintTop_toBottomOf="@id/tv_app_name" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/bt_google_sign_in"
-        style="?materialButtonOutlinedStyle"
+        style="@style/Widget.Material3.Button.OutlinedButton"
         android:layout_width="0dp"
-        android:layout_height="64dp"
+        android:layout_height="56dp"
         android:layout_marginHorizontal="8dp"
         android:layout_marginTop="48dp"
-        android:textColor="@color/black"
-        app:icon="@drawable/icons8_google"
+        android:textColor="#696969"
+        app:icon="@drawable/googleg_standard_color_18"
         app:iconTint="@null"
         android:text="Continue with Google"
+        android:fontFamily="@font/source_sans_pro_semibold"
+        app:fontFamily="@font/source_sans_pro_semibold"
+        android:textSize="16sp"
         app:iconGravity="textStart"
+        app:iconPadding="8dp"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -66,14 +78,19 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/bt_fb_sign_in"
-        style="?materialButtonOutlinedStyle"
+        style="@style/Widget.Material3.Button.OutlinedButton"
         android:layout_width="0dp"
-        android:layout_height="64dp"
-        android:textColor="@color/black"
+        android:layout_height="56dp"
+        android:textColor="?colorPrimary"
+        android:fontFamily="@font/source_sans_pro_semibold"
+        app:fontFamily="@font/source_sans_pro_semibold"
+        android:textSize="16sp"
         android:layout_marginTop="4dp"
         android:text="Continue with Facebook"
         app:iconTint="@null"
+        app:strokeColor="?colorPrimary"
         app:iconGravity="textStart"
+        app:iconPadding="8dp"
         app:icon="@drawable/icons8_facebook"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="@id/bt_google_sign_in"
@@ -93,21 +110,27 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/bt_login_with_email"
         android:layout_width="0dp"
-        android:layout_height="64dp"
+        android:layout_height="56dp"
         android:text="Log in with Email"
         android:textAllCaps="false"
         android:layout_marginTop="12dp"
+        android:fontFamily="@font/source_sans_pro_semibold"
+        app:fontFamily="@font/source_sans_pro_semibold"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@id/divider"
         app:layout_constraintStart_toStartOf="@id/divider"
         app:layout_constraintTop_toBottomOf="@id/divider" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/bt_create_account"
-        style="@style/Widget.MaterialComponents.Button.TextButton"
+        style="@style/Widget.Material3.Button.TextButton"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="56dp"
         android:text="New to Buuk? Create Account"
-        android:layout_marginVertical="16dp"
+        android:layout_marginVertical="8dp"
+        android:fontFamily="@font/source_sans_pro_semibold"
+        app:fontFamily="@font/source_sans_pro_semibold"
+        android:textSize="16sp"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="@id/bt_login_with_email"
         app:layout_constraintStart_toStartOf="@id/bt_login_with_email"
@@ -115,10 +138,13 @@
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_terms_services"
-        style="?textAppearanceBody2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/source_sans_pro"
+        app:fontFamily="@font/source_sans_pro"
+        android:textColor="@color/black"
+        android:textSize="16sp"
         android:gravity="center_horizontal"
         android:text="By creating an account, you accept Buuk's"
         app:layout_constraintEnd_toEndOf="@id/bt_create_account"
@@ -133,35 +159,41 @@
         app:layout_constraintStart_toStartOf="@id/tv_terms_services"
         app:layout_constraintTop_toBottomOf="@id/tv_terms_services">
 
-        <com.google.android.material.button.MaterialButton
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/bt_terms_of_services"
-            style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="top"
+            android:gravity="top|end"
             android:insetTop="0dp"
+            android:textSize="16sp"
+            android:fontFamily="@font/source_sans_pro_semibold"
+            app:fontFamily="@font/source_sans_pro_semibold"
             android:text="Terms of Services"
-            android:textAllCaps="false"
-            android:textSize="13sp" />
+            android:textColor="?colorPrimary"/>
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_and"
             style="?textAppearanceBody2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="and" />
+            android:fontFamily="@font/source_sans_pro"
+            app:fontFamily="@font/source_sans_pro"
+            android:textSize="16sp"
+            android:gravity="center|top"
+            android:text=" and " />
 
-        <com.google.android.material.button.MaterialButton
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/bt_privacy_policy"
-            style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="top"
+            android:gravity="top|start"
+            android:fontFamily="@font/source_sans_pro_semibold"
+            app:fontFamily="@font/source_sans_pro_semibold"
             android:insetTop="0dp"
+            android:textSize="16sp"
+            android:textColor="?colorPrimary"
             android:text="Privacy Policy"
-            android:textAllCaps="false"
-            android:textSize="13sp" />
+            />
 
     </LinearLayout>
 

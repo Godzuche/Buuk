@@ -6,15 +6,19 @@
     app:startDestination="@id/loginFragment">
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.godzuche.buuk.ui.auth.LoginFragment"
+        android:name="com.godzuche.buuk.ui.auth.login.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
             android:id="@+id/action_loginFragment_to_signUpFragment"
             app:destination="@id/signUpFragment" />
         <action
-            android:id="@+id/action_loginFragment_to_action_learn"
-            app:destination="@id/action_learn"
+            android:id="@+id/action_loginFragment_to_emailLoginFragment"
+            app:destination="@id/emailLoginFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_exploreFragment"
+            app:destination="@id/action_explore"
+            app:launchSingleTop="true"
             app:popUpTo="@id/nav_graph"
             app:popUpToInclusive="true" />
     </fragment>
@@ -24,8 +28,9 @@
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_sign_up" >
         <action
-            android:id="@+id/action_signUpFragment_to_action_learn"
-            app:destination="@id/action_learn"
+            android:id="@+id/action_signUpFragment_to_exploreFragment"
+            app:destination="@id/action_explore"
+            app:launchSingleTop="true"
             app:popUpTo="@id/nav_graph"
             app:popUpToInclusive="true" />
     </fragment>
@@ -34,4 +39,29 @@
         android:name="com.godzuche.buuk.ui.main.CoursesFragment"
         android:label="My Courses"
         tools:layout="@layout/fragment_courses"/>
+    <fragment
+        android:id="@+id/emailLoginFragment"
+        android:name="com.godzuche.buuk.ui.auth.EmailLoginFragment"
+        android:label="fragment_email_login"
+        tools:layout="@layout/fragment_email_login" />
+    <fragment
+        android:id="@+id/action_explore"
+        android:name="com.godzuche.buuk.ui.main.ExploreFragment"
+        android:label="Explore"
+        tools:layout="@layout/fragment_explore" />
+    <fragment
+        android:id="@+id/action_downloads"
+        android:name="com.godzuche.buuk.ui.main.DownloadsFragment"
+        android:label="Downloads"
+        tools:layout="@layout/fragment_downloads" />
+    <fragment
+        android:id="@+id/action_favorites"
+        android:name="com.godzuche.buuk.ui.main.FavoriteFragment"
+        android:label="Favorite"
+        tools:layout="@layout/fragment_favorite" />
+    <fragment
+        android:id="@+id/action_profile"
+        android:name="com.godzuche.buuk.ui.main.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>

@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Buuk</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="your_web_client_id" />
+    <string name="web_client_id">253044604502-q251cg9rme8gq0toe7tgk5skm03vd58r.apps.googleusercontent.com</string>
+    <string name="facebook_app_id">267740215447712</string>
+    <string name="fb_login_protocol_scheme">fb267740215447712</string>
+
 </resources>
