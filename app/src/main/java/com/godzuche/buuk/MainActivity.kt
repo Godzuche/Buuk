@@ -1,13 +1,11 @@
 package com.godzuche.buuk
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.transition.Transition
 import android.view.Gravity
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import androidx.core.view.isGone
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
@@ -41,18 +39,27 @@ class MainActivity : AppCompatActivity() {
 
         bottomNavigationView = binding.bottomNavView
 
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController
 
-        val topLevelDestinations = setOf<Int>( R.id.action_explore, R.id.action_favorites, R.id.action_learn, R.id.action_downloads, R.id.action_profile)
+        val topLevelDestinations = setOf(R.id.action_explore,
+            R.id.action_favorites,
+            R.id.action_learn,
+            R.id.action_downloads,
+            R.id.action_profile)
         val appBarConfiguration = AppBarConfiguration(topLevelDestinations)
+        binding.appBarMain.collapsingToolbarMain.setupWithNavController(binding.appBarMain.toolbarMain,
+            navController,
+            appBarConfiguration)
         setupActionBarWithNavController(navController, appBarConfiguration)
         bottomNavigationView.setupWithNavController(navController)
 
-        navController.addOnDestinationChangedListener { controller, destination, arguments ->
+        navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
                 R.id.loginFragment -> hideTopAppBarAndBottomNav()
                 R.id.signUpFragment -> hideTopAppBarAndBottomNav()
+                R.id.emailLoginFragment -> hideTopAppBarAndBottomNav()
                 else -> showTopAppBarAndBottomNav()
             }
         }
@@ -60,13 +67,14 @@ class MainActivity : AppCompatActivity() {
 
     private fun showTopAppBarAndBottomNav() {
 //        TransitionManager.beginDelayedTransition(binding.root, Slide(Gravity.BOTTOM).excludeTarget(R.id.nav_host_fragment, true))
-        binding.appBarMain.toolbarMain.visibility = View.VISIBLE
+        binding.appBarMain.collapsingToolbarMain.visibility = View.VISIBLE
         bottomNavigationView.visibility = View.VISIBLE
     }
 
     private fun hideTopAppBarAndBottomNav() {
-        TransitionManager.beginDelayedTransition(binding.root, Slide(Gravity.BOTTOM).excludeTarget(R.id.nav_host_fragment, true))
-        binding.appBarMain.toolbarMain.visibility = View.GONE
+        TransitionManager.beginDelayedTransition(binding.root,
+            Slide(Gravity.BOTTOM).excludeTarget(R.id.nav_host_fragment, true))
+        binding.appBarMain.collapsingToolbarMain.visibility = View.GONE
         bottomNavigationView.visibility = View.GONE
     }
 

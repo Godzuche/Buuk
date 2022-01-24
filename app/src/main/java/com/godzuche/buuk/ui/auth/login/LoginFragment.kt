@@ -154,9 +154,16 @@ class LoginFragment : Fragment() {
                 })
             }
 
+            btLoginWithEmail.setOnClickListener { navigateToEmailLoginScreen() }
+
             btCreateAccount.setOnClickListener { navigateToSignUpScreen() }
         }
 
+    }
+
+    private fun navigateToEmailLoginScreen() {
+        val action = LoginFragmentDirections.actionLoginFragmentToEmailLoginFragment()
+        findNavController().navigate(action)
     }
 
 /*    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

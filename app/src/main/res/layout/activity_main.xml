@@ -5,6 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     android:theme="@style/Theme.Buuk"
     tools:context=".MainActivity">
 
@@ -20,8 +21,10 @@
     
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav_view"
+        style="@style/Widget.Material3.BottomNavigationView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
         app:menu="@menu/menu_bottom_nav"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

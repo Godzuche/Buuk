@@ -3,9 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/Buuk/app/src/main/res/drawable/ic_account_circle.xml" value="0.17962962962962964" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/Buuk/app/src/main/res/drawable/ic_icons8_facebook.xml" value="0.2101851851851852" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/Buuk/app/src/main/res/drawable/ic_icons8_google.xml" value="0.2101851851851852" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/Buuk/app/src/main/res/drawable/ic_search.xml" value="0.2101851851851852" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/Buuk/app/src/main/res/drawable/ic_settings.xml" value="0.17962962962962964" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/Buuk/app/src/main/res/layout/activity_intro.xml" value="0.20677083333333332" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/Buuk/app/src/main/res/layout/activity_main.xml" value="0.19270833333333334" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/Buuk/app/src/main/res/layout/activity_splash.xml" value="0.19270833333333334" />
@@ -17,7 +19,7 @@
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/Buuk/app/src/main/res/layout/fragment_explore.xml" value="0.18614130434782608" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/Buuk/app/src/main/res/layout/fragment_favorite.xml" value="0.17864583333333334" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/Buuk/app/src/main/res/layout/fragment_login.xml" value="0.22" />
-        <entry key="..\:/Users/Administrator/AndroidStudioProjects/Buuk/app/src/main/res/layout/fragment_profile.xml" value="0.1" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/Buuk/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/Buuk/app/src/main/res/layout/fragment_sign_up.xml" value="0.2" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/Buuk/app/src/main/res/menu/menu_bottom_nav.xml" value="0.19270833333333334" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/Buuk/app/src/main/res/menu/menu_main_activity.xml" value="0.20677083333333332" />

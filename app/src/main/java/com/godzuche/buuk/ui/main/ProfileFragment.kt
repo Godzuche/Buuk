@@ -1,10 +1,8 @@
 package com.godzuche.buuk.ui.main
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import com.godzuche.buuk.R
 
 class ProfileFragment : Fragment() {
@@ -13,6 +11,9 @@ class ProfileFragment : Fragment() {
         super.onCreate(savedInstanceState)
         arguments?.let {
         }
+
+        // Enable options menu
+        setHasOptionsMenu(true)
     }
 
     override fun onCreateView(
@@ -21,6 +22,20 @@ class ProfileFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_profile, container, false)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.menu_top_app_bar, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when(item.itemId) {
+            R.id.action_settings -> {
+                //
+                true
+            }
+            else -> return super.onOptionsItemSelected(item)
+        }
     }
 
 }
